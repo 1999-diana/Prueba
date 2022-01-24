@@ -163,11 +163,15 @@ namespace AppConsole
                 payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
 
             };
-          
+           PruebaDb repos = new PruebaDb();
+            repos.Customers.AddRange(customer1,customer12,customer3,customer4);
+            repos.SaveChanges();
             PruebaDb rep = new PruebaDb();
             rep.Payments.AddRange(payment1,payment2,payment3,payment4,payment5,payment6);
             rep.SaveChanges();
-            
+            PruebaDb re = new PruebaDb();
+            re.Rentals.AddRange(rental1,rental2,rental3,rental4,rental5,rental6,rental7,rental8);
+            re.SaveChanges();
 
         }
     }
