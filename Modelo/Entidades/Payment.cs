@@ -14,7 +14,7 @@ namespace Modelo.Entidades
         public int staff_id { get; set; }
         public  Rental rental { get; set; }
         public int rental_id { get; set; }
-        public double amount { get; set; }
+        public decimal amount { get; set; }
         public DateTime payment_date { get; set; }
 
 

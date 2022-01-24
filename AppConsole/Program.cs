@@ -1,6 +1,7 @@
 ﻿using Modelo.Entidades;
 using System;
-
+using System.Collections.Generic;
+using ModeloDB;
 namespace AppConsole
 {
     internal class Program
@@ -120,7 +121,58 @@ namespace AppConsole
                 last_update = new DateTime(2021, 11, 01, 8, 03, 02),
                 active = 1
             };
-           
+            Payment payment1 = new Payment()
+            {
+                staff_id = 1,
+                amount = 800.00M,
+                payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
+
+            };
+            Payment payment2 = new Payment()
+            {
+                staff_id = 1,
+                amount = 800.00M,
+                payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
+
+            };
+            Payment payment3 = new Payment()
+            {
+                staff_id = 1,
+                amount = 800.00M,
+                payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
+
+            };
+            Payment payment4 = new Payment()
+            {
+                staff_id = 1,
+                amount = 800.00M,
+                payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
+
+            };
+            Payment payment5 = new Payment()
+            {
+                staff_id = 1,
+                amount = 800.00M,
+                payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
+
+            };
+            Payment payment6 = new Payment()
+            {
+                staff_id = 1,
+                amount = 800.00M,
+                payment_date = new DateTime(2021, 11, 01, 8, 03, 02)
+
+            };
+           PruebaDb repos = new PruebaDb();
+            repos.Customers.AddRange(customer1,customer12,customer3,customer4);
+            repos.SaveChanges();
+            PruebaDb rep = new PruebaDb();
+            rep.Payments.AddRange(payment1,payment2,payment3,payment4,payment5,payment6);
+            repos.SaveChanges();
+            PruebaDb re = new PruebaDb();
+            re.Rentals.AddRange(rental1,rental2,rental3,rental4,rental5,rental6,rental7,rental8);
+            re.SaveChanges();
+
         }
     }
 }

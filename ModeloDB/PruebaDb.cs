@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ModeloDB
 {
-    public class ModeloDB : DbContext
+    public class PruebaDb : DbContext
     {
         public DbSet<Rental> Rentals { get; set; }
         public DbSet<Payment> Payments { get; set; }
