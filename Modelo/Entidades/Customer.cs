@@ -18,6 +18,8 @@ namespace Modelo.Entidades
         public DateTime create_date { get; set; }
         public DateTime last_update { get; set; }
         public int active { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+
 
     }
 }

@@ -22,7 +22,10 @@ namespace ModeloDB
         }
         protected override void OnModelCreating(ModelBuilder model)
         {
-
+            model.Entity<Payment>()
+                .HasOne<Customer>(s => s.customer)
+                .WithMany(g => g.Payments)
+                .HasForeignKey(s => s.paymentId);
         }
     }
 }
